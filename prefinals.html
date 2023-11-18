@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <input type="number" name="Pricipal" id="num1" placeholder="input number">
+        <button type="button" onclick="main() ">submit</button>
+        
+    </form>
+
+    <script>
+
+
+
+function main(){
+    console.log(oddeven());
+    console.log(checkPrime());
+}
+console.log(main());
+
+
+function oddeven() {
+    var inputNum = document.getElementById("num1").value;
+    // var inputNum = document.getElementById("num1").value;
+ let i = 1;
+ let j = 2;
+ console.log("Odd")
+ while (i <= inputNum) {
+    
+    if (i % 2 !== 0) {
+      console.log(i);
+    }
+    i++;
+ }
+ console.log("even")
+ while (j <= inputNum) {
+    
+    if (j % 2 === 0) {
+      console.log(j);
+    }
+    j++;
+ }
+}
+
+
+function checkPrime() {
+    var inputNum = document.getElementById("num1").value;
+ if (inputNum <= 1) {
+    console.log(inputNum + " Prime")
+    return false;
+    
+ }
+ 
+ for (let i = 2; i < inputNum; i++) {
+    if (inputNum % i === 0) {
+        console.log(inputNum + " Not prime")
+      return false;
+      
+    }
+ }
+ 
+ return true;
+}
+
+
+
+        
+
+        
+    </script>
+</body>
+</html>
